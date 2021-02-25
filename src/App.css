@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.gallery {
+  background: #17182f;
+  color: #fff;
+}
+
+.gallery p {
+  /* color: #fff */
+}
+
+.gallery h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+.gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px
+}
+
+.gallery .intro p {
+  margin-bottom: 0
+}
+
+
+.container {
+  overflow-x: hidden
+}
+
+.photo {
+  border: 5px solid #17182f;
+}
+
+img {
+  width: 100%;
+  height: 90%;
+}
+
+/* button {
+  
+} */
