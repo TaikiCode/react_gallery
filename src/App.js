@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./App.css";
+import SimpleReactLightbox from "simple-react-lightbox";
 import Card from "./components/Card";
 import Button from "./components/Button";
+import "./App.css";
 
 function App() {
   const [images, setImages] = useState([
@@ -27,16 +28,20 @@ function App() {
   };
 
   return (
-    <div className="gallery">
-      <div className="container pt-3">
-        <Button getNewImage={getNewImage} removeImage={removeImage} />
-        <div className="intro text-center pt-5">
-          <h1 className="">Lightbox Gallery</h1>
-          <p className="mt-2">Please click on any image to open gallary !</p>
+    <SimpleReactLightbox>
+      <div className="gallery">
+        <div className="container pt-4">
+          <Button getNewImage={getNewImage} removeImage={removeImage} />
+          <div className="text-center pt-5 mb-5">
+            <h1 className="title">Lightbox Gallery</h1>
+            <p className="font-italic text-secondary mt-2">
+              Please click on any image to open gallary !
+            </p>
+          </div>
+          <Card images={images} />
         </div>
-        <Card images={images} />
       </div>
-    </div>
+    </SimpleReactLightbox>
   );
 }
 
